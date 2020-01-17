@@ -1,4 +1,4 @@
-binding.pry
+require 'pry'
 
 class Dog 
   attr_accessor :name, :breed, :age 
@@ -9,6 +9,7 @@ class Dog
     @breed = breed
     @age = age
     @@all < self
+    binding.pry
   end
   
   
