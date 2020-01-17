@@ -3,14 +3,12 @@ require 'pry'
 class Dog 
   attr_accessor :name, :breed, :age 
   
-  @@all = []
-  def initialize(name,breed,age)
-    @name = name
-    @breed = breed
-    @age = age
-    @@all < self
+ def initialize(params)
+  params.each do |key, value|
     binding.pry
+    instance_variable_set("@#{key}", value)
   end
+end
   
   
 end 
